@@ -8,15 +8,15 @@ let allLeftBtns = document.querySelectorAll(".left-btns button");
 let allRightBtns = document.querySelectorAll(".right-btns button");
 
 
-// function checkHigher() {
-//   if (homeNumber > guestNumber) {
-//     homeScoreDisplay.style.backgroundColor = "blue";
-//     guestScoreDisplay.style.backgroundColor = "black";
-//   } else if (homeNumber < guestNumber) {
-//     guestScoreDisplay.style.backgroundColor = "blue";
-//     homeScoreDisplay.style.backgroundColor = "black";
-//   }
-// }
+function checkHigher() {
+  if (homeNumber > guestNumber) {
+    homeScoreDisplay.style.backgroundColor = "blue";
+    guestScoreDisplay.style.backgroundColor = "black";
+  } else if (homeNumber < guestNumber) {
+    guestScoreDisplay.style.backgroundColor = "blue";
+    homeScoreDisplay.style.backgroundColor = "black";
+  }
+}
 
 // adding eventlisteners to the buttons
 
@@ -74,5 +74,7 @@ newGame.addEventListener("click", function () {
   guestNumber = 0;
   homeScoreDisplay.textContent = homeNumber;
   guestScoreDisplay.textContent = guestNumber;
+  homeScoreDisplay.style.backgroundColor = "black";
+  guestScoreDisplay.style.backgroundColor = "black";
 });
 
